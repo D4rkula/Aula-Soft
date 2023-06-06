@@ -10,11 +10,11 @@ $query = mysqli_query($conexao, $select);
 $dados = mysqli_fetch_row($query);
 
 if ($login == $DADOS[1] && $senha == $DADOS[2]) {
-    SESSION_START (),
-    $_SESSION['nome'] = $DADOS[0];
-	HEADER ('location: index.php');
+    SESSION_START(),
+    $_SESSION['nome_usuario'] = $DADOS[0];
+	HEADER('location: index.php');
 } else {
-	HEADER ('location: login.php');
+	HEADER('location: login.php');
 }
 
 ?>
